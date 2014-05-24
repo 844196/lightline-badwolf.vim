@@ -19,56 +19,66 @@ let s:c_black2 = '236'
 let s:c_black3 = '233'
 let s:c_black4 = '243'
 
-let s:p = {
-            \ 'normal' : {},
-            \ 'inactive' : {},
-            \ 'insert' : {},
-            \ 'replace' : {},
-            \ 'visual' : {},
-            \ 'tabline' : {}
-            \ }
+let s:p = { 'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'tabline':{} }
 
 "guifg, guibg, ctermfg, ctermbg
 
 "normal mode
 let s:p.normal.middle = [
-            \ [s:white, s:black1, s:c_white, s:c_black1]]
+            \ [s:white, s:black1, s:c_white, s:c_black1]
+            \ ]
 let s:p.normal.left = [
-            \ [s:black1, s:green, s:c_black1, s:c_green]]
+            \ [s:black1, s:green, s:c_black1, s:c_green],
+            \ [ s:white, s:black2, s:c_white, s:c_black2 ]
+            \ ]
 let s:p.normal.right = [
-            \ [s:black4, s:white, s:c_black4, s:c_white]]
+            \ [s:black4, s:white, s:c_black4, s:c_white]
+            \ ]
 
 "insert mode
 let s:p.insert.left = [
-            \ [s:white, s:blue, s:c_white, s:c_blue]]
+            \ [s:white, s:blue, s:c_white, s:c_blue],
+            \ [ s:white, s:black2, s:c_white, s:c_black2 ]
+            \ ]
 
 "visual mode
 let s:p.visual.left = [
-            \ [s:white, s:orange, s:c_white, s:c_orange]]
+            \ [s:white, s:orange, s:c_white, s:c_orange],
+            \ [ s:white, s:black2, s:c_white, s:c_black2 ]
+            \ ]
 
 "replace mode
 let s:p.replace.left = [
-            \ [s:white, s:red, s:c_white, s:c_red]]
+            \ [s:white, s:red, s:c_white, s:c_red],
+            \ [ s:white, s:black2, s:c_white, s:c_black2 ]
+            \ ]
 
 "buffer inactive
 let s:p.inactive.middle = [
-            \ [s:white, s:black2, s:c_white, s:c_black2]]
+            \ [s:white, s:black2, s:c_white, s:c_black2]
+            \ ]
 let s:p.inactive.right = [
             \ s:p.inactive.middle[0],
-            \ s:p.inactive.middle[0]]
+            \ s:p.inactive.middle[0]
+            \ ]
 let s:p.inactive.left = [
             \ s:p.inactive.middle[0],
-            \ s:p.inactive.middle[0]]
+            \ s:p.inactive.middle[0]
+            \ ]
 
 "tabline
 let s:p.tabline.middle = [
-            \ [s:white, s:black2, s:c_white, s:c_black2]]
+            \ [s:white, s:black2, s:c_white, s:c_black2]
+            \ ]
 let s:p.tabline.right = [
-            \ [s:white, s:black2, s:c_white, s:c_black2]]
+            \ [s:white, s:black2, s:c_white, s:c_black2]
+            \ ]
 let s:p.tabline.left = [
-            \ [s:black4, s:black2, s:c_black4, s:c_black2]]
+            \ [s:black4, s:black2, s:c_black4, s:c_black2]
+            \ ]
 "current tab
 let s:p.tabline.tabsel = [
-            \ [s:black1, s:green, s:c_white, s:c_black4]]
+            \ [s:black1, s:green, s:c_white, s:c_black4]
+            \ ]
 
 let g:lightline#colorscheme#badwolf#palette = s:p
