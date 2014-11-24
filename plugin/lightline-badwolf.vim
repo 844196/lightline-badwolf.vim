@@ -32,7 +32,8 @@ let s:p.normal.left = [
             \ [ s:white, s:black2, s:c_white, s:c_black2 ]
             \ ]
 let s:p.normal.right = [
-            \ [s:black4, s:white, s:c_black4, s:c_white]
+            \ [s:black4, s:white, s:c_black4, s:c_white],
+            \ [ s:white, s:black2, s:c_white, s:c_black2 ]
             \ ]
 
 "insert mode
