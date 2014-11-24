@@ -1,25 +1,22 @@
-# lightline-badwolf
+# lightline-badwolf.vim
 
+[![](http://img.shields.io/github/tag/844196/lightline-badwolf.vim.svg?style=flat)](https://github.com/844196/memo.vim/releases)
+[![](http://img.shields.io/github/issues/844196/lightline-badwolf.vim.svg?style=flat)](https://github.com/844196/memo.vim/issues)
+[![](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](http://opensource.org/licenses/mit-license.php)
+
+![](http://38.media.tumblr.com/dda121c60104c4918e74c76e09662778/tumblr_nfjl2no3401s7qf9xo1_1280.png)
 
 ## Overview
-[lightline](https://github.com/itchyny/lightline.vim)に[badwolf](https://github.com/sjl/badwolf)に適応させたっぽいカラースキームを追加します。
+[lightline.vim](https://github.com/itchyny/lightline.vim)に[badwolf](https://github.com/sjl/badwolf)を適応させたっぽいcolorschemeを追加します。
 
 
-## Setup
-
-手動でファイルをコピーするか、[NeoBundle](https://github.com/Shougo/neobundle.vim)でインストールします。
-
+## Installation
 ```vim
-NeoBundle '844196/lightline-badwolf.vim'
-```
+" add .vimrc
+NeoBundle '844196/lightline-badwolf.vim', {
+    \ 'depends' : 'itchyny/lightline.vim'
+    \ }
 
-`.vimrc`に設定を追記してください。
-
-```vim
-let g:lightline = {}
+" setting colorscheme
 let g:lightline.colorscheme = 'badwolf'
 ```
-
-## Screenshots
-
-![](https://farm3.staticflickr.com/2925/14064164939_028c1371e0_o.png)
